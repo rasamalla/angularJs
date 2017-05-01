@@ -1,0 +1,405 @@
+<!DOCUTYPE html>
+<html>
+<!-- starting of head ....-->
+
+<head><title> javascript</title>
+	<center><h1 style="color:white">JavaScript </h1></center>
+	<!-- css code...........-->
+
+	<meta charset="utf-8">
+ <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+
+h1.google{
+	position: absolute;
+	top: 540px;
+	left:1px;
+	color: pink;
+}
+h1.yahoo
+{
+	position: absolute;
+	top: 540px;
+	right: 1px;
+	color: red;
+
+}
+a.facebook
+{
+	position: absolute;
+	top:10px;
+	right: 200px;
+
+}
+a.youtube
+{
+	position: absolute;
+	top:10px;
+	right: 160px;
+
+}
+a.twitter
+{
+	position: absolute;
+	top:10px;
+	right: 80px;
+
+}
+a.wikipedia
+{
+	position: absolute;
+	top:10px;
+	right: 10px;
+
+}
+
+
+div.login{
+	position: absolute;
+	top: 95px;
+	left: 359px;
+
+}
+ div.btn
+{
+	position: absolute;
+	top:600px;
+	left:400px;
+	color: yellow;
+}  
+
+#div2
+{
+   
+  
+   
+   -webkit-transform:rotate(75deg); /* Safari and Chrome */
+   background-color:red;
+}
+
+#fire
+{
+  position:absolute;
+  top:0px; 
+  left:10px;
+  visibility:hidden;
+}
+
+ #s {
+  position:absolute;
+  top:350px; 
+  left:10px;
+  visibility:hidden;
+} 
+#blinker
+
+{
+    position: absolute;
+    top: 100px;
+    left:900px;
+
+}
+#text
+{
+   position: absolute;
+   top: 150px;
+   right:800px;
+}
+#radio
+{
+   position: absolute;
+   top: 380px;
+   right:370px;
+   color: green;
+}
+
+#form{
+  color: white;
+}
+#button{
+  position: absolute;
+  top: 400px;
+  right:500px;
+  color: green;
+
+}
+#sixnumber{
+  position: absolute;
+  top: 500px;
+  right:550px;
+}
+
+</style>
+<!-- javascript code -->
+
+<script type="text/javascript">
+
+function submitFunction()
+{
+var x=document.forms["myForm"]["username"].value;
+var y=document.forms["myForm"]["password"].value;
+
+if(x==null||x==""||y==null||y=="")
+	{
+	alert("Both fields can't be empty");
+	}
+		else
+		{
+			if(x=="shekhar")
+			{ 
+					if (y=="")
+						{
+							alert("please enter the password");
+						}
+				if(y=="12345")
+					{
+						alert("Login successful");
+
+					}
+			
+						else
+						{
+							alert("password not matched ");
+						}
+
+			}
+
+ 				else{
+ 					alert("username doesn't exit");
+ 				}	
+	 				
+							
+			
+
+		}
+
+
+}
+ /* &&&&&&& picture blinking6****************************  */
+
+
+
+/* second pic blinking....*/
+  var imgId = 'fire';
+var imgOnTime = 20;
+var imgOffTime = 150;
+window.onload = function()
+{
+  // check for existence of objects we will use
+  if (document.getElementById) {
+    var ele = document.getElementById(imgId);
+    if (ele && ele.style) {
+      setTimeout('blinkImg()', imgOffTime);
+    }
+  }
+}
+function blinkImg()
+{
+  var v, t, ele = document.getElementById(imgId);
+  if (ele.style.visibility == 'visible') {
+    // hide it, then wait for imgOffTime
+    v = 'hidden';
+    t = imgOffTime;
+  }
+  else {
+    // show it, then wait for imgOnTime
+    v = 'visible';
+    t = imgOnTime;
+  }
+  ele.style.visibility = v;
+  setTimeout('blinkImg()', t);
+}
+
+/* var imgId = 's';
+var imgOnTime = 10;
+var imgOffTime = 150;
+window.onload = function()
+{
+  // check for existence of objects we will use
+  if (document.getElementById) {
+    var ele = document.getElementById(imgId);
+    if (ele && ele.style) {
+      setTimeout('blinkImg()', imgOffTime);
+    }
+  }
+}
+function blinkImg()
+{
+  var v, t, ele = document.getElementById(imgId);
+  if (ele.style.visibility == 'visible') {
+    // hide it, then wait for imgOffTime
+    v = 'hidden';
+    t = imgOffTime;
+  }
+  else {
+    // show it, then wait for imgOnTime
+    v = 'visible';
+    t = imgOnTime;
+  }
+  ele.style.visibility = v;
+  setTimeout('blinkImg()', t);
+}
+*/
+</script>
+<!-- javascript code end    -->
+<!-- ending of head tag.......-->
+</head>
+
+<!-- html body code is starting......-->
+C:\Documents and Settings\Shekar\Desktop\segregate pls
+
+<body style="background:maroon">
+
+<a class="facebook" href="https://www.facebook.com"><img src="C:\Documents and Settings\Shekar\Desktop\segregate pls\f.png" height="50px" width="35px" ></a>
+
+<a class="youtube" href="https://www.youtube.com"><img src="C:\Documents and Settings\Shekar\Desktop\segregate pls\y.png" height="45px" width="30px" ></a>
+
+<a class="twitter" href="https://www.twitter.com"><img src="C:\Documents and Settings\Shekar\Desktop\segregate pls\t.png" height="45px" width="30px" ></a>
+
+<a class="wikipedia" href="https://www.wikipedia.org"><img src="C:\Documents and Settings\Shekar\Desktop\segregate pls\w.png" height="45px" width="30px" ></a>
+
+<center>
+	<!-- option <form name="myForm" onsubmit="submitFunction()"> -->
+<form name="myForm"  id="form">		
+Username:<input type="" name="username"  placeholder="username"><br>
+Password:<input type="password" name="password" placeholder="password"><br><br>
+<input type="submit" value="Login" onclick="submitFunction()">
+</form>
+
+<!-- tutorial point example....-->
+
+<form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+         <table style="color:blue" cellspacing="2" cellpadding="2" border="1">
+            
+            <tr>
+               <td align="right">Name</td>
+               <td><input type="text" name="Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">EMail</td>
+               <td><input type="text" name="EMail" /></td>
+            </tr>
+            <tr>
+               <td align="right">Adress</td>
+               <td><input type="text" name="EMail" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Zip Code</td>
+               <td><input type="text" name="Zip" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Country</td>
+               <td>
+                  <select name="Country">
+                     <option value="-1" selected>[choose yours]</option>
+                     <option value="1">USA</option>
+                     <option value="2">UK</option>
+                     <option value="3">INDIA</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align="right"></td>
+               <td><input type="submit" value="Submit" /></td>
+            </tr>
+            
+         </table>
+      </form><br>
+      <div>
+<span id="text"style="color:white">
+	<p>Form validation normally used to occur at the server, after the client had entered all the necessary data and then pressed the Submit button. If the data entered by a client was incorrect or was simply missing, the server would have to send all the data back to the client and request that the form be resubmitted with correct information. This was really a lengthy process which used to put a lot of burden on the server.</p>
+
+<p>JavaScript provides a way to validate form's data on the client's computer before sending it to the web server. Form validation generally performs two functions.<p>
+      	</span>
+        <br>
+
+
+      </div>
+
+<marquee scroll="75" direction="left"><div id="div2"><h1 style="color:white">Hello, CSS3!</h1></div></marquee>
+<!-- End of tutorial point example.....-->
+</center>
+
+
+<h1 class="google" style="background:green" > <marquee scrollamount="13" direction="right">Hello Well Come To White House .<a href="https://www.google.com">Google<a><span><a href="https://www.smec.ac.in">smec<a></span></marquee></h1>
+
+<h1 class="yahoo" style="background:white" > <marquee scrollamount="14" direction="left">Hello Well Come To Los Vegas.<a href="https://www.yahoo.com">Yahoo<a></marquee></h1>
+
+
+
+<div class="btn">
+<p style="color:yellow"> <b>Copywrite@www.javascript.com.</b></p>
+</div>
+
+<img src="C:\Documents and Settings\Shekar\Desktop\segregate pls\anu.jpg" id="fire" height="25%" width="15%"><br>
+
+<img src="C:\Documents and Settings\Shekar\Desktop\segregate pls\s.jpg" id="s" height="35%" width="25%"><br>
+
+<span id="blinker" style="color:blue" ><img src=" C:\Documents and Settings\Shekar\Desktop\segregate pls\s.jpg" height="30%" width="35%"></span>
+
+<div id="radio">
+<input  type="radio" name="subject" value="maths">Maths.
+<input type="radio" name="subject" value="physics">Physics.
+<input  type="radio" name="subject" value="chemistry">chemistry.
+<input type="radio" name="subject" value="sanskrit">sanskrit.
+</div>
+
+<div id="button"><a style="color:green" href="login1.html">Login</a></div> 
+
+<h1 style="color:blue"><sup>IndePENdent</sup><sub>mafIa</sub><sup>@Code</sup></h1>
+
+
+<script type="text/javascript">
+ /* var imgId = 's';
+var imgOnTime = 10;
+var imgOffTime = 150;
+window.onload = function()
+{
+  // check for existence of objects we will use
+  if (document.getElementById) {
+    var ele = document.getElementById(imgId);
+    if (ele && ele.style) {
+      setTimeout('blinkImg()', imgOffTime);
+    }
+  }
+}
+function blinkImg()
+{
+  var v, t, ele = document.getElementById(imgId);
+  if (ele.style.visibility == 'visible') {
+    // hide it, then wait for imgOffTime
+    v = 'hidden';
+    t = imgOffTime;
+  }
+  else {
+    // show it, then wait for imgOnTime
+    v = 'visible';
+    t = imgOnTime;
+  }
+  ele.style.visibility = v;
+  setTimeout('blinkImg()', t);
+}
+*/
+
+
+var blink_speed = 500;
+var t = setInterval(function () { 
+  var ele = document.getElementById('blinker'); 
+  ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+   }, 200);
+
+
+</script>
+</body>
+<!-- ending of html code......-->
+</html>
+
