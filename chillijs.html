@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eg-us">
+<head>
+
+
+
+
+</head>
+
+
+<body bgcolor="maroon">
+
+        <script 
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+		</script>
+
+		<div  ng-app="spicyApp1" ng-controller="SpicyController">
+ 		<button ng-click="chiliSpicy()">Chili</button>
+ 		<button ng-click="jalapenoSpicy()">Jalapeño</button>
+ 		<p ng-bind="spice"></p>
+			</div>
+
+
+
+			<script type="text/javascript">
+
+				var myApp = angular.module('spicyApp1', []);
+
+				myApp.controller('SpicyController', ['$scope', function($scope) {
+    			$scope.spice = 'very';
+
+    			$scope.chiliSpicy = function() {
+        		$scope.spice = 'chili';
+   				 };
+
+    			$scope.jalapenoSpicy = function() {
+        		$scope.spice = 'jalapeño';
+   				 };
+				}]);
+
+
+			</script>
+
+
+</body>
+</html>
